@@ -1,0 +1,42 @@
+/* Text-first minimalist layout */
+:root {
+  --bg: #ffffff;
+  --ink: #111;
+  --link: #0a47a3;
+  --wrap: 72ch;          /* largeur de lecture confortable */
+  --lh: 1.75;
+  --space: 1.25rem;      /* rythme vertical */
+}
+
+* { box-sizing: border-box; }
+html { font-size: 17px; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Times New Roman", Times, serif;
+  line-height: var(--lh);
+}
+
+.main {
+  max-width: var(--wrap);
+  margin: 5rem auto;
+  padding: 0 1.25rem;
+}
+
+h1, h2, h3 { line-height: 1.2; margin: 0 0 calc(var(--space) * 0.75); }
+h1 { font-size: 1.9rem; margin-top: 0; }
+h2 { font-size: 1.35rem; margin-top: calc(var(--space) * 2); }
+h3 { font-size: 1.1rem; margin-top: calc(var(--space) * 1.5); }
+
+p, ul, ol { margin: 0 0 var(--space); }
+ul { padding-left: 1.1rem; }
+
+a { color: var(--link); text-decoration: underline; }
+a:visited { color: #5a2ea6; }
+
+.small { font-size: 0.95rem; color: #444; }
+
+hr { border: none; height: 1px; background: #e6e6e6; margin: calc(var(--space) * 1.5) 0; }
+
+footer { margin-top: calc(var(--space) * 3); color: #666; font-size: 0.95rem; }
